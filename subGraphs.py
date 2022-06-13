@@ -1,10 +1,10 @@
 lines = {
     'AF' : ['EU', 'SA'],        # Imagine that this code is for a intercontinental delivery company
-    'NA' : [],                  # AF - Africa
-    'SA' : ['NA'],              # NA - North America
-    'AS' : ['AU'],              # SA - South America
-    'AU' : ['AF'],              # AS - Asia
-    'EU' : ['AS', 'NA']         # AU - Austrialia
+    'NA' : [],                  # AF - Africa                       
+    'SA' : ['NA'],              # NA - North America            NA  <------ EU  ------> AS
+    'AS' : ['AU'],              # SA - South America            ^           ^            |      Graph look like this
+    'AU' : ['AF'],              # AS - Asia                     |           |            v
+    'EU' : ['AS', 'NA']         # AU - Austrialia               SA  <------ AF  <------ AU
 }                               # EU - Europa
                                 # AN - Anctartida
 request1 = {

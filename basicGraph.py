@@ -2,12 +2,12 @@ V = ['B1', 'B2', 'H1', 'H2', 'H3', 'H4']            # 2 bosses and 4 hired peopl
 E = [                                               # Boss 1 know boss 2 and boss 1 know hired 1 and hired 2
     ['B1', 'B2'], ['B1','H1'], ['B1','H2'],         # Boss 2 know boss 1 and boss 2 know hired 3 and hired 4
     ['B2', 'H3'], ['B2', 'H4'],                     # Every hired person know each other
-    ['H1', 'H2'], ['H1', 'H3'], ['H1', 'H4'],
-    ['H2', 'H3'], ['H2', 'H4'],
-    ['H3', 'H4'] 
-    ]
-
-# Who know the Hired 3
+    ['H1', 'H2'], ['H1', 'H3'], ['H1', 'H4'],       
+    ['H2', 'H3'], ['H2', 'H4'],                     #           B1 ------ B2
+    ['H3', 'H4']                                    #          /  \      /  \
+    ]                                               #        H1 - H2 -  H3 - H4     Graph look like this
+                                                    #         \------\-/-----/
+# Who know the Hired 3                                         \------/\----/
 
 def whoKnowPerson(person, E):
     friends = []                # In this list I will add every person that 'person' knows
